@@ -43,3 +43,6 @@ Temporary Items
 .history
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode
+
+### My own practice html file (used for JS scripts)
+testing.html
