@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Loops: Task 2</title>
+
+    </head>
+
+    <body>
+
+        <section class="preview">
+        </section>
+
+    </body>
+    <script>
+        let name = 'Chris';
+        let i = 0;
+        let para = document.createElement('p');
+
+        let phonebook = [{
+            name: 'Chris',
+            number: '1549'
+        }, {
+            name: 'Li Kang',
+            number: '9634'
+        }, {
+            name: 'Anne',
+            number: '9065'
+        }, {
+            name: 'Francesca',
+            number: '3001'
+        }, {
+            name: 'Mustafa',
+            number: '6888'
+        }, {
+            name: 'Tina',
+            number: '4312'
+        }, {
+            name: 'Bert',
+            number: '7780'
+        }, {
+            name: 'Jada',
+            number: '2282'
+        }, ]
+
+
+        // For Loop
+
+        for (let i = 0; i < phonebook.length; i++) {
+            let searchName = phonebook[i].name;
+            if (searchName === name) {
+                para.textContent = `Name: ${searchName} | Number: ${phonebook[i].number}`;
+                break;
+            } else {
+                para.textContent = `Name not found`;
+            }
+        }
+
+
+        // While Loop
+        /*
+        while (i < phonebook.length) {
+            let searchName = phonebook[i].name;
+            if (searchName === name) {
+                let result = `Name: ${searchName} | Number: ${phonebook[i].number}`
+                para.textContent = result;
+                break;
+            } else {
+                let result = `Name not found`;
+                para.textContent = result;
+            }
+            i++;
+        }
+        */
+
+
+        // Do/While Loop
+        /*
+        do {
+            let searchName = phonebook[i].name;
+            if (searchName === name) {
+                para.textContent = `Name: ${searchName} | Number: ${phonebook[i].number}`;
+                break;
+            } else {
+                para.textContent = `Name not found`;
+            }
+            i++;
+        } while (i < phonebook.length);
+        */
+
+        let section = document.querySelector('section');
+        section.appendChild(para);
+    </script>
+
+</html>
